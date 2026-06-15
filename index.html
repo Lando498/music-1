@@ -8,22 +8,24 @@
         <link rel="stylesheet" href="music-player.css">
     </head>
     <body>
-        <!-- <audio controls src="./jingle-bells.mp3"></audio> -->
-        <div id="music-player">
-            <img id="song-image" src="./album-art1.jpg"/>
-            <div id="song-name">Song</div>
-            <div id="song-artist">Artist</div>
+        <div style="backdrop-filter: blur 15px;"id="music-player">
+            <img id="song-image" src="album-art1.jpg"></img>
+            <div id="song-name">song</div>
+            <div id="song-artist">artist</div>
 
-            <input id="slider-song" type="range">
+            <input id="slider-song" type = range>
 
             <div id="music-buttons">
-                <i id="shuffle-song" class="fa-solid fa-shuffle"></i>                
+                <i id="shuffle-song"class="fa-solid fa-shuffle"></i>
                 <i id="prev-song" class="fa-solid fa-backward-step fa-2x"></i>
                 <i id="playpause-song" class="fa-solid fa-circle-play fa-3x"></i>
                 <i id="next-song" class="fa-solid fa-forward-step fa-2x"></i>
-                <i id="repeat-song" class="fa-solid fa-repeat"></i>                
+                <i id="repeat-song" class="fa-solid fa-repeat"></i>
             </div>
         </div>
-        <script src="music-player.js"></script>
+<input type="file" id="song-upload" accept=".mp3,audio/*" multiple>
+
+<script src="https://cdn.jsdelivr.net/npm/jsmediatags@3.9.7/dist/jsmediatags.min.js"></script>
+<script src="music-player.js"></script>
     </body>
 </html>

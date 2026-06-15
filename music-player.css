@@ -1,55 +1,88 @@
-body {
+body{
     font-family: Arial, Helvetica, sans-serif;
 }
-
-#music-player {
+ 
+#music-player{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: solid;
+    border-width: 2px;
+    border-radius: 15px;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    padding-top: 2px;
+    background-image: url("ui.png");
+    background-size: cover;
+    height: 700px;
+    width: 420px;
 }
 
-#song-image {
-    height: 300px;
-    width: 300px;
-    border-radius: 10px;
+#song-image{
+    height: 262px;
+    width: 83%;
+    border-radius: 7px;
+    padding-left: 4px;
+    position: absolute;
+    bottom: 402px;
 }
 
-#song-name {
-    margin-top: 20px;
+#song-name{
+    position: absolute;
+    color: white;
+     top: 252px;
     font-size: 2em;
+}
+#song-artist{
+    position: absolute;
+    color: white;
+     top: 285px;
+    font-size: 1em;
 }
 
 #music-buttons {
     display: flex;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 300px;
+    padding-left: 3px;
+    
+}
+#music-buttons i{
+    padding : 27.3px;
 }
 
-#music-buttons i {
-    padding: 10px;
-    /* color: red; */
-}
-
-#slider-song {
-    /* accent-color: red; */
+#slider-song{
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     width: 300px;
-    height: 5px;
-    background: repeating-linear-gradient(45deg, red, red 12px, white 12px, white 24px);
-    border: 1px solid red;
+    height: 20px;
+   background: linear-gradient(
+        to bottom, 
+        #0A95FF 0%,    /* Light glossy blue */
+        #0053EE 9%,    /* Gradient drop */
+        #0050EE 40%,   /* Base blue */
+        #0053EE 88%,   /* Gradient transition */
+        #06F 93%,      /* Highlight */
+        #005BFF 95%,   /* Outer glow/border */
+        #003DD7 96%,   /* Dark inner border */
+        #003DD7 100%   /* Bottom edge */
+    );
     border-radius: 10px;
     margin-top: 20px;
+    position: absolute;
+    top: 315px;
 }
 
 #slider-song::-webkit-slider-thumb {
     -webkit-appearance: none;
-    -moz-appearance: none;
     appearance: none;
-    background: red;
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
+    background: #78ae43;
+    cursor: pointer;
     border-radius: 50%;
 }
+
