@@ -1,18 +1,76 @@
+const playlisttab = document.getElementById("playlist")
 const songimage = document.getElementById("song-image");
 const songname = document.getElementById("song-name");
 const songartist = document.getElementById("song-artist");
-
+const musicplayer = document.getElementById("music-player")
 const songslider = document.getElementById("slider-song");
 const shufflebtn = document.getElementById("shuffle-song")
 const repeatbtn = document.getElementById("repeat-song")
 const playpausebtn = document.getElementById("playpause-song");
 const prevsongbutton = document.getElementById("prev-song");
 const nextsongbutton = document.getElementById("next-song");
+const songname1 = document.getElementById("song-name1")
+const songname2 = document.getElementById("song-name2")
+const songname3 = document.getElementById("song-name3")
+const songartist1 = document.getElementById("song-artist1")
+const songartist2 = document.getElementById("song-artist2")
+const songartist3 = document.getElementById("song-artist3")
+const songimage1 = document.getElementById("song-image1")
+const songimage2 = document.getElementById("song-image2")
+const songimage3 = document.getElementById("song-image3")
+const playerheader = document.getElementById("player-header")
 let shuffling = false
 let repeating = false
 let x = 0
 const songupload = document.getElementById("song-upload")
-
+function makeDraggable(element) {
+    if (!element) return;
+  
+    let initialX = 0;
+    let initialY = 0;
+    let currentX = 0;
+    let currentY = 0;
+  
+    const header = document.getElementById(element.id + "header");
+  
+    if (header) {
+      header.onmousedown = startDragging;
+    } else {
+      element.onmousedown = startDragging;
+    }
+  
+    function startDragging(e) {
+      e = e || window.event;
+      e.preventDefault();
+  
+      initialX = e.clientX;
+      initialY = e.clientY;
+  
+      document.onmouseup = stopDragging;
+      document.onmousemove = drag;
+    }
+  
+    function drag(e) {
+      e = e || window.event;
+      e.preventDefault();
+  
+      currentX = initialX - e.clientX;
+      currentY = initialY - e.clientY;
+  
+      initialX = e.clientX;
+      initialY = e.clientY;
+  
+      element.style.top = (element.offsetTop - currentY) + "px";
+      element.style.left = (element.offsetLeft - currentX) + "px";
+    }
+  
+    function stopDragging() {
+      document.onmouseup = null;
+      document.onmousemove = null;
+    }
+  }
+    makeDraggable(musicplayer);
+    makeDraggable(playlisttab);
 let songs = [
     {
         image: "./giphy.gif",
@@ -166,8 +224,24 @@ songupload.addEventListener("change", function () {
     }
 
     songs = new Array(files.length);
-let loadedCount = 0;
 
+let loadedCount = 0;
+function updatePlaylistUI() {
+    if (songs[0]) {
+        songname1.innerText = songs[0].name;
+        songartist1.innerText = songs[0].artist;
+    }
+
+    if (songs[1]) {
+        songname2.innerText = songs[1].name;
+        songartist2.innerText = songs[1].artist;
+    }
+
+    if (songs[2]) {
+        songname3.innerText = songs[2].name;
+        songartist3.innerText = songs[2].artist;
+    }
+}
 files.forEach((file, index) => {
     window.jsmediatags.read(file, {
         onSuccess: function(result) {
@@ -195,13 +269,14 @@ files.forEach((file, index) => {
 
             loadedCount++;
 
-            if (loadedCount === files.length) {
-                currentsongindex = 0;
-                updatesong(false);
-                console.log(songs);
-            }
+        if (loadedCount === files.length) {
+            currentsongindex = 0;
+            updatesong(false);
+            updatePlaylistUI();
+            console.log(songs);
+        }
         },
-
+    
         onError: function() {
 
             songs[index] = {

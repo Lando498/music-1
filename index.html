@@ -9,7 +9,9 @@
     </head>
     <body>
         <div style="backdrop-filter: blur 15px;"id="music-player">
-            <img id="song-image" src="album-art1.jpg"></img>
+             <div id="music-playerheader" style="border: solid; width: 100%; border-radius: 15px; position: absolute; left: -0.5%; top: -1%; height: 30px;display: flex;justify-content: flex-end;">
+            </div> 
+            <img id="song-image" src="giphy.gif"></img>
             <div id="song-name">song</div>
             <div id="song-artist">artist</div>
 
@@ -23,7 +25,39 @@
                 <i id="repeat-song" class="fa-solid fa-repeat"></i>
             </div>
         </div>
-<input type="file" id="song-upload" accept=".mp3,audio/*" multiple>
+        <div id="song-custom-upload">
+            
+        </div>
+       
+<div class="fileinputbox">
+  <label class="file-label">
+     <input type="file" id="song-upload" accept=".mp3,audio/*" multiple>
+    <span class="file-cta">
+      <span class="file-icon">
+        <i class="fas fa-upload"></i>
+      </span>
+      <span class="file-label"> Choose a file… </span>
+    </span>
+  </label>
+</div>
+    <div id="playlist">
+        <div id="song1">
+            <img id="song-image1" src="giphy.gif"></img>
+            <label id="song-name1">song-name</label>
+            <label id="song-artist1">song-artist</label>
+        </div>
+                <div id="song2">
+            <img id="song-image2" src="giphy.gif"></img>
+            <label id="song-name2">song-name</label>
+            <label id="song-artist2">song-artist</label>
+        </div>
+                <div id="song3">
+            <img id="song-image3" src="giphy.gif"></img>
+            <label id="song-name3">song-name</label>
+            <label id="song-artist3">song-artist</label>
+        </div>
+    </div>
+
 
 <script src="https://cdn.jsdelivr.net/npm/jsmediatags@3.9.7/dist/jsmediatags.min.js"></script>
 <script src="music-player.js"></script>

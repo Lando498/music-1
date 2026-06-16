@@ -19,6 +19,73 @@ body{
     height: 700px;
     width: 420px;
 }
+#playlist{
+    border: solid;
+    border-width: 2px;
+    border-radius: 15px;
+    height: 700px;
+    width: 420px;
+    backdrop-filter: blur(15px);
+}
+
+#song1{
+    padding-left: 15px;
+    padding-top: 15px;
+}
+
+#song-name1{
+    position: absolute;
+    top: 25px;
+    padding-left: 5px;
+}
+#song-artist1{
+    position: absolute;
+    top: 40px;
+    padding-left: 5px;
+}
+#song2{
+    padding-left: 15px;
+    padding-top: 15px;
+}
+
+#song-name2{
+    position: absolute;
+    top: 95px;
+    padding-left: 5px;
+}
+#song-artist2{
+    position: absolute;
+    top: 110px;
+    padding-left: 5px;
+}
+#song3{
+    padding-left: 15px;
+    padding-top: 15px;
+}
+
+#song-name3{
+    position: absolute;
+    top: 165px;
+    padding-left: 5px;
+}
+#song-artist3{
+    position: absolute;
+    top: 180px;
+    padding-left: 5px;
+}
+
+#song-image1{
+    height: 50px;
+    width: 50px;
+}
+#song-image2{
+    height: 50px;
+    width: 50px;
+}
+#song-image3{
+    height: 50px;
+    width: 50px;
+}
 
 #song-image{
     height: 262px;
@@ -61,14 +128,14 @@ body{
     height: 20px;
    background: linear-gradient(
         to bottom, 
-        #0A95FF 0%,    /* Light glossy blue */
-        #0053EE 9%,    /* Gradient drop */
-        #0050EE 40%,   /* Base blue */
-        #0053EE 88%,   /* Gradient transition */
-        #06F 93%,      /* Highlight */
-        #005BFF 95%,   /* Outer glow/border */
-        #003DD7 96%,   /* Dark inner border */
-        #003DD7 100%   /* Bottom edge */
+        #0A95FF 0%,
+        #0053EE 9%,
+        #0050EE 40%,
+        #0053EE 88%,
+        #06F 93%,
+        #005BFF 95%,
+        #003DD7 96%,
+        #003DD7 100%
     );
     border-radius: 10px;
     margin-top: 20px;
@@ -81,8 +148,41 @@ body{
     appearance: none;
     width: 20px;
     height: 20px;
-    background: #78ae43;
+       background: linear-gradient(
+        to bottom, 
+        #0aff33 0%,
+        #00ee34 9%,
+        #00ee14 40%,
+        #00ee14 88%,
+        rgb(0, 255, 13) 93%,
+        #15ff00 95%,
+        #00d724 96%,
+        #12d700 100%
+    );
     cursor: pointer;
     border-radius: 50%;
+}
+
+#song-upload{
+    display: none;
+}
+
+#fileinputbox{
+       background: linear-gradient(
+        to bottom, 
+        #0A95FF 0%,
+        #0053EE 9%,
+        #0050EE 40%,
+        #0053EE 88%,
+        #06F 93%,
+        #005BFF 95%,
+        #003DD7 96%,
+        #003DD7 100%
+    );
+    display: flex;
+    position: absolute;
+    top: 10px;
+    height: 50px;
+    width: 50px;
 }
 
