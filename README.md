@@ -2,7 +2,7 @@
 
 Usage instructions:  
 
-to use visit [https://musepod.netlify.app](https://musepod.netlify.app)
+to use visit [https://musepod.netlify.app](https://caffeinated.qzz.io/music-player.html)
 it comes preloaded with canned heat by jamiroquai  
 but if you wanted to upload your own songs you can upload up to 3 .mp3 files using the choose files button in the top left corner  
 
@@ -17,3 +17,6 @@ a whole interface rather than this little ipod eg:playlists
 a vb.net app that could connect  
 spotify or other services integration  
 ![image of website](https://i.postimg.cc/3w5ttpFg/image-2026-06-15-224857693.png)
+
+Note:
+For using multiple songs you need to select multiple and upload them as multiple rather than one by one
