@@ -2,7 +2,7 @@
 
 Usage instructions:  
 
-to use visit [https://musepod.netlify.app](https://caffeinated.qzz.io/music-player.html)
+to use visit [caffeinated.qzz.io/musepod](https://caffeinated.qzz.io/music-player.html)
 it comes preloaded with canned heat by jamiroquai  
 but if you wanted to upload your own songs you can upload up to 3 .mp3 files using the choose files button in the top left corner  
 
